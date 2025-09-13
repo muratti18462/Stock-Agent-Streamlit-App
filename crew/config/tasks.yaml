@@ -1,0 +1,47 @@
+research_task:
+  description: >
+    Research the company's recent performance, major news, and analyst ratings.
+    Find out about its main competitors and their market position.
+    The final output must be a comprehensive summary of the company's context and market standing.
+  expected_output: >
+    A comprehensive summary in markdown format that includes:
+    - Company Overview
+    - Recent News and Developments
+    - Analyst Ratings and Market Sentiment
+    - Key Competitors and their Position
+    - A general conclusion on the company's current state.
+  agent: researcher
+
+financial_task:
+  description: >
+    Use the 'Stock Data Tool' to get the historical data for the stock.
+    Then, use the 'Prophet Forecast Tool' to generate a price forecast for the next {{forecast_period}}.
+    Analyze the forecast data to identify key trends and potential price movements.
+    Provide a detailed analysis of the forecast and its implications.
+
+  expected_output: >
+    A detailed analysis of the stock's future price, including:
+    - A summary of the forecast from the Prophet model.
+    - An analysis of the forecast trends.
+    - Key takeaways and potential risks or opportunities based on the forecast.
+    - A conclusion on the likely price direction.
+  agent: financial_analyst
+
+reporting_task:
+  description: >
+    Consolidate the research and financial analysis into a single, polished financial report.
+    The report should be well-structured, easy to read, and include an executive summary,
+    the research findings, the financial forecast, and final recommendations.
+    Ensure the final report is clear and actionable.
+  expected_output: >
+    A professional, well-structured financial report in markdown format. It MUST contain the following sections:
+    - Title: {{topic}} Financial Report
+    - Executive Summary
+    - Company and Market Research
+    - Financial Forecast and Analysis
+    - Final Investment Recommendation (Buy/Sell/Hold)
+  agent: reporting_analyst
+  context:
+  - research_task
+  - financial_task
+

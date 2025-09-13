@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latest-ai-development"
+version = "1.0.0"
+dependencies = [
+    "crewai",
+    "crewai-tools",
+    "python-dotenv>=0.17.0"
+]
+
+[project.scripts]
+run_crew = "latest_ai_development.main:run"
