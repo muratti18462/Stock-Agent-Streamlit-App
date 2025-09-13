@@ -14,15 +14,6 @@ Simply provide a stock ticker and a forecast period, and the crew will deliver a
 
 ---
 
-## Table of Contents
-- [ Key Features](#-key-features)
-- [ How It Works](#️-how-it-works)
-- [ Technologies Used](#-technologies-used)
-- [ File Structure](#-file-structure)
-- [ Getting Started](#-getting-started)
-
----
-
 ## Key Features
 - **Multi-Agent Collaboration**: A crew of three distinct agents works together to perform a complete analysis.  
 - **Real-time Data Integration**: Uses the `SerperDevTool` and a custom `StockDataTool` to gather the latest news, analyst ratings, and competitor information from sources like Yahoo Finance.  
