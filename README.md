@@ -64,7 +64,8 @@ The project follows a sequential process, with each agent performing a specializ
 ---
 
 ## 📁 File Structure
-├── crew/ │ ├── \\\_\\\_init\\\_\\\_.py │ ├── config/ │ │ ├── agents.yaml # Agent roles and backstories │ │ └── tasks.yaml # Task descriptions and expected outputs │ ├── crew.py # Defines the main Crew and its agents/tasks │ └── tools.py # Contains the custom tools (StockDataTool, ProphetForecastTool) ├── main.py # Main script to run the crew ├── README.md # This file ├── requirements.txt # List of project dependencies └── .env # Environment variables (API keys)
+
+<pre><code class="language-bash">├── crew/ │ ├── __init__.py │ ├── config/ │ │ ├── agents.yaml # Agent roles and backstories │ │ └── tasks.yaml # Task descriptions and expected outputs │ ├── crew.py # Defines the main Crew and its agents/tasks │ └── tools.py # Contains the custom tools (StockDataTool, ProphetForecastTool) ├── main.py # Main script to run the crew ├── README.md # This file ├── requirements.txt # List of project dependencies └── .env # Environment variables (API keys) </code></pre>
 
 
 ### Prerequisites
