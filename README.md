@@ -1,6 +1,6 @@
 # CrewAI Stock Market Analyst
 
-![ezgif com-animated-gif-maker](https://github.com/user-attachments/assets/555f376b-4e45-4ef8-a7dd-409ac299b244)
+![ezgif com-animated-gif-maker](https://github.com/user-attachments/assets/79d0e658-a2ad-4899-89af-f3f2483d6d5f)
 
 **Advanced AI Financial Analysis:** End-to-end stock market forecasting and analysis with multi-agent collaboration.
 
