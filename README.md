@@ -1,5 +1,7 @@
 # CrewAI Stock Market Analyst
 
+![ezgif com-animated-gif-maker](https://github.com/user-attachments/assets/555f376b-4e45-4ef8-a7dd-409ac299b244)
+
 **Advanced AI Financial Analysis:** End-to-end stock market forecasting and analysis with multi-agent collaboration.
 
 This project is a sophisticated financial analysis application built on the **CrewAI framework**, providing an end-to-end pipeline for automated stock market analysis.  
