@@ -1,12 +1,12 @@
 import yfinance as yf
-from crewai_tools import BaseTool, tool
+from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
 import pandas as pd
 from prophet import Prophet
 import json
 
 class StockDataToolSchema(BaseModel):
-    """Input schema for the StockDataTool."""
+    
     ticker: str = Field(description="The stock ticker symbol, e.g., 'AAPL'.")
 
 class StockDataTool(BaseTool):
@@ -21,7 +21,6 @@ class StockDataTool(BaseTool):
             if hist.empty:
                 return f"No data found for ticker: {ticker}"
             
-            # Format data for JSON output
             hist.reset_index(inplace=True)
             hist['Date'] = hist['Date'].dt.strftime('%Y-%m-%d')
             return json.dumps(hist.to_dict('records'))
@@ -29,7 +28,7 @@ class StockDataTool(BaseTool):
             return f"An error occurred while fetching data: {e}"
 
 class ProphetForecastToolSchema(BaseModel):
-    """Input schema for the ProphetForecastTool."""
+    
     data: str = Field(description="JSON string of historical stock data.")
     forecast_period: str = Field(description="The period for the forecast, e.g., '1 year'.")
 
@@ -63,7 +62,6 @@ class ProphetForecastTool(BaseTool):
             forecast.rename(columns={'ds': 'Date', 'yhat': 'Forecast'}, inplace=True)
             forecast['Date'] = forecast['Date'].dt.strftime('%Y-%m-%d')
             
-            # Return only the relevant forecast columns
             return json.dumps(forecast[['Date', 'Forecast', 'yhat_lower', 'yhat_upper']].to_dict('records'))
         except Exception as e:
             return f"An error occurred during forecasting: {e}"

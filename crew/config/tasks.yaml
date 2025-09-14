@@ -14,11 +14,9 @@ research_task:
 
 financial_task:
   description: >
-    Use the 'Stock Data Tool' to get the historical data for the stock.
-    Then, use the 'Prophet Forecast Tool' to generate a price forecast for the next {{forecast_period}}.
-    Analyze the forecast data to identify key trends and potential price movements.
+    Analyze the provided Prophet forecast data for {{topic}} over the next {{forecast_period}} days.
+    Identify key trends, potential price movements, risks, and opportunities.
     Provide a detailed analysis of the forecast and its implications.
-
   expected_output: >
     A detailed analysis of the stock's future price, including:
     - A summary of the forecast from the Prophet model.
@@ -44,4 +42,3 @@ reporting_task:
   context:
   - research_task
   - financial_task
-

@@ -25,7 +25,7 @@ def run_stock_crew(ticker: str, prophet_forecast: pd.DataFrame, period: int) -> 
     inputs = {
         'topic': ticker,
         'prophet_prediction': forecast_json,
-        'period': period
+        'forecast_period': period
     }
     
     crew = LatestAiDevelopmentCrew().crew()

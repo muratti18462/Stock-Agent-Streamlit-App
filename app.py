@@ -52,7 +52,7 @@ if st.button('Generate Report'):
     st.subheader('AI Agent Research and Analysis')
     with st.spinner('Running AI agents to generate a comprehensive report...'):
         try:
-            # Pass the forecast data AND the period directly to the CrewAI function
+
             final_report = run_stock_crew(selected_stock, forecast, period)
             st.subheader('Final Financial Report')
             st.markdown(final_report)
