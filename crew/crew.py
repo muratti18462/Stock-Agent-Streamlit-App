@@ -35,7 +35,7 @@ class LatestAiDevelopmentCrew:
         return Agent(
             config=self.agents_config['financial_analyst'],
             verbose=True,
-            tools=[]  # No ProphetForecastTool anymore
+            tools=[]
         )
 
     @task
